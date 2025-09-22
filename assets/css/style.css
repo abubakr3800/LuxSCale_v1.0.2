@@ -62,9 +62,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ========================================
    HEADER STYLES
    ======================================== */
-.header {
+.navbar.header {
   background: var(--background-dark);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
 }
 
 .logo{
@@ -93,24 +94,95 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
 }
 
-.main-nav .nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-link {
+.navbar-nav .nav-link {
   color: var(--text-primary);
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: var(--transition);
   border-bottom: 3px solid transparent;
+  font-weight: 500;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 991.98px) {
+  .navbar.header .container-fluid {
+    padding: 0 1rem;
+  }
+  
+  .navbar-collapse {
+    background: var(--background-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .navbar-nav {
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background: rgba(235, 27, 38, 0.2);
+    border-bottom: none;
+  }
+  
+  .navbar-nav .d-flex {
+    justify-content: center;
+  }
+}
+
+/* Additional Mobile Responsive Styles */
+@media (max-width: 576px) {
+  .navbar.header .container-fluid {
+    padding: 0 0.5rem;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-collapse {
+    padding: 0.5rem;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* ========================================

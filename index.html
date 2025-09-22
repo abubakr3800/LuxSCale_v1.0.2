@@ -13,34 +13,47 @@
 <body>
 
   <!-- Header Section -->
-  <header class="header">
-    <div class="container-fluid">
-      <div class="d-flex justify-content-between align-items-center px-5 py-4">
-        <!-- Logo -->
-        <div class="logo">
-          <div class="logo-images d-flex align-items-center">
-            <span class="logo-text">Lux</span>
-            <span class="logo-text text-red">SC</span>
-            <span class="logo-text">ale</span>
-            <span class="logo-text">AI</span>
-          </div>
+  <nav class="navbar navbar-expand-lg header">
+    <div class="container-fluid px-5 py-4">
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-images d-flex align-items-center">
+          <span class="logo-text">Lux</span>
+          <span class="logo-text text-red">SC</span>
+          <span class="logo-text">ale</span>
+          <span class="logo-text">AI</span>
         </div>
-        
-        <!-- Navigation -->
-        <nav class="main-nav">
-          <ul class="nav-list d-flex gap-2 fs-5 mb-0">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About LuxSCale</a></li>
-            <li><a href="#docs" class="nav-link">Documentations</a></li>
-            <li><a href="#contact" class="nav-link">Contact us</a></li>
-          </ul>
-        </nav>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Navigation -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About LuxSCale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#docs">Documentations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact us</a>
+          </li>
+        </ul>
         
         <!-- Login Button -->
-        <button class="btn btn-red">Login</button>
+        <div class="d-flex">
+          <button class="btn btn-red ms-3">Login</button>
+        </div>
       </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Hero Section -->
   <section id="home" class="hero-section">
